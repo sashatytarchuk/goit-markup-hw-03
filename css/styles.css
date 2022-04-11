@@ -404,11 +404,13 @@ letter-spacing: 0.03em;
 .container.section{
     padding-top: 94px;
     padding-bottom: 94px;
+    align-content: center;
 }
 
 .competentions.container.section{
     padding-top: 0;
     width: 1200px;
+    align-content: center;
 }
 
 .team.container.section{
@@ -446,6 +448,7 @@ letter-spacing: 0.03em;
 
 .cards.container.section{
     width: 1170px;
+    align-content: center;
 }
 
 .filter-cards-list{
