@@ -37,6 +37,7 @@ h1, h2, h3, p {
 img{
     display: block;
     max-width: 100%;
+    height: auto;
 }
 .container{
     padding: 0 15px;
@@ -48,7 +49,7 @@ img{
     border-bottom: 1px solid var(--header-border-color);
 }
 
-.header.container{
+.header-inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,22 +61,37 @@ nav{
 }
 
 .links-list{
-    display: flex;
-    padding: 32px 0;    
+    display: flex;   
 }
 
 .contacts-links{
     display: flex;
-    padding: 32px 0;
 }
 
-.contacts-links>.list-item:not(:last-child){
-    margin-right: 50px;
+.contacts-links>.list-item{
+    padding: 32px 25px;
+    display: inline-block;
 }
 
-.links-list>.list-item:not(:last-child){
-    margin-right: 50px;
-    
+.contacts-links>.list-item:first-child {
+    padding-left: 0;
+}
+
+.contacts-links>.list-item:last-child {
+    padding-right: 0;
+}
+
+.links-list>.list-item{
+    padding: 32px 25px;
+    display: inline-block;
+}
+
+.links-list>.list-item:first-child {
+    padding-left: 0;
+}
+
+.links-list>.list-item:last-child {
+    padding-right: 0;
 }
 
 body{
@@ -108,7 +124,8 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03em;
     margin-right: 93px;
-    padding: 25px 0;
+    
+    display: inline-block;
 }
 
 .link {
@@ -414,6 +431,9 @@ address{
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+    border-bottom: 1px solid var(--card-border-color);
+    border-left: 1px solid var(--card-border-color);
+    border-right: 1px solid var(--card-border-color);
 }
 
 .section{
