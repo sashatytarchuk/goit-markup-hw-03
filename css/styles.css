@@ -17,7 +17,6 @@
     --white-color: rgb(255, 255, 255);
     --partly-white-color: rgba(255, 255, 255, 0.6);
     --logo-black-color: #000000;
-    --background-dark-blue-color: #2F303A;
     --background-light-blue-color: #F5F4FA;
     --header-border-color: #ECECEC;
     --card-border-color: #EEEEEE;
@@ -39,20 +38,28 @@ img{
     max-width: 100%;
     height: auto;
 }
+
 .container{
     padding: 0 15px;
     width: 1200px;
     margin: 0 auto;
 }
 
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .header{
     border-bottom: 1px solid var(--header-border-color);
 }
 
-.header-inner{
+.header.container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: none;
 }
 
 nav{
@@ -69,12 +76,11 @@ nav{
 }
 
 .contacts-links>.list-item{
-    padding: 32px 25px;
-    display: inline-block;
+    margin-right: 50px;
 }
 
-.contacts-links>.list-item:first-child {
-    padding-left: 0;
+.contacts-links>.list-item:last-child {
+    margin-right: 0;
 }
 
 .contacts-links>.list-item:last-child {
@@ -82,16 +88,11 @@ nav{
 }
 
 .links-list>.list-item{
-    padding: 32px 25px;
-    display: inline-block;
-}
-
-.links-list>.list-item:first-child {
-    padding-left: 0;
+    margin-right: 50px;
 }
 
 .links-list>.list-item:last-child {
-    padding-right: 0;
+    margin-right: 0;
 }
 
 body{
@@ -104,7 +105,7 @@ body{
 
 
 .footer{
-    background-color: var(--background-dark-blue-color);
+    background-color: var(--header-footer-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -125,7 +126,6 @@ body{
     letter-spacing: 0.03em;
     margin-right: 93px;
     
-    display: inline-block;
 }
 
 .link {
@@ -186,7 +186,7 @@ body{
     color: var(--hover-color);
 }
 
-.main.section{
+.main{
    background-color:var(--header-footer-background-color); 
    padding: 200px 0;
 }
@@ -236,9 +236,13 @@ body{
     display: flex;
 }
 
-.advantages-list>.list-item:not(:last-child){
+.advantages-list>.list-item{
     max-width: 270px;
     margin-right: 30px;
+}
+
+.advantages-list>.list-item:last-child{
+    margin-right: 0;
 }
 
 .advantages-heading{
@@ -249,6 +253,7 @@ body{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     max-width: 270px;
+    margin-bottom: 10px;
 }
 
 .advantages-text{
@@ -270,6 +275,37 @@ body{
     margin-bottom: 50px;
 }
 
+.competentions.section{
+    padding-top: 0;
+}
+
+.images-list{
+    display: flex;
+}
+
+.images-list>.list-item:not(:last-child){
+    margin-right: 30px;
+}
+
+.team{
+    background-color: var(--background-light-blue-color);   
+}
+
+.our-team-list{
+    display: flex;
+}
+
+.list-item.team-list{
+    background-color: var(--white-color);
+    width: 270px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.list-item.team-list:not(:last-child){
+    margin-right: 30px;
+}
+
 .our-team-list-heading{
     color: var(--headings-color);
     font-size: 16px;
@@ -280,18 +316,17 @@ body{
     margin-bottom: 10px;
 }
 
-
-.team-info{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .our-team-list-description{
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 0;
+}
+
+.team-info{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .logo-link-footer{
@@ -305,8 +340,8 @@ body{
     letter-spacing: 0.03em;
 }
 
-address{
-    margin-top: 9px;
+.address{
+    margin-top: 20px;
 }
 
 .address-list{
@@ -436,61 +471,15 @@ address{
     border-right: 1px solid var(--card-border-color);
 }
 
-.section{
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.competentions.section{
-    padding-top: 0;
-}
-
-.team{
-    background-color: var(--background-light-blue-color);   
-}
-
-.our-team-list{
-    display: flex;
-}
-
-.list-item.team-list{
-    background-color: var(--white-color);
-    width: 270px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.list-item.team-list:not(:last-child){
-    margin-right: 30px;
-}
-
-.images-list{
-    display: flex;
-}
-
-.images-list>.list-item:not(:last-child){
-    margin-right: 30px;
-}
-
-.cards.container.section{
-    width: 1170px;
-    justify-content:center;
-}
-
 .filter-cards-list{
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
-    padding: 0;
 }
 
 .filter-cards-list>.list-item{
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 90px) / 3);
-}
-
-.last.filter-cards-list{
-    margin-bottom: 0;
 }
